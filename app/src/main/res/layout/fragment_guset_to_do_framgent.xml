@@ -1,0 +1,230 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.m7mdmimo.jerb.fragment.GusetToDoFramgent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collap_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/jerb_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_menu" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_action_jerb" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <FrameLayout
+                android:id="@+id/frame_cover_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_photo"
+                    app:layout_collapseMode="parallax" />
+                <!--
+                Make Text with top of Pyramids
+                -->
+                <RelativeLayout
+                    android:id="@+id/relative_counter_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_5"
+                    android:layout_marginTop="40dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_label_day"
+                        style="@style/TextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_day_remaining"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_label_hour"
+                        style="@style/TextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/tv_label_day"
+                        android:layout_toRightOf="@id/tv_label_day"
+                        android:text="@string/label_hour_remaining" />
+
+                    <TextView
+                        android:id="@+id/tv_label_minute"
+                        style="@style/TextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_toEndOf="@id/tv_label_hour"
+                        android:layout_toRightOf="@id/tv_label_hour"
+                        android:text="@string/label_min_remaining" />
+
+                    <TextView
+                        android:id="@+id/tv_label_sec"
+                        style="@style/TextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/tv_label_minute"
+                        android:layout_toRightOf="@id/tv_label_minute"
+                        android:text="@string/label_sec_remaining" />
+
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/count_plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_label_day"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginStart="@dimen/margin_10"
+                        app:isHideTimeBackground="true"
+                        app:isShowDay="true"
+                        app:isShowHour="true"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:isTimeTextBold="false"
+                        app:suffixHourRightMargin="@dimen/margin_20"
+                        app:suffixMinuteRightMargin="@dimen/margin_10"
+                        app:suffixTextColor="@color/transparent"
+                        app:suffixTextSize="@dimen/tv_label_20sp"
+                        app:timeTextColor="#000000"
+                        app:timeTextSize="@dimen/tv_label_20sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_add_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:background="@color/transparent"
+                    android:text="@string/add_cover"
+                    android:textColor="@color/purple" />
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_add_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@color/purple"
+        android:src="@drawable/ic_add_black_24dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_plans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:scrollbars="vertical"
+                app:layout_anchor="@id/app_bar_layout"
+                app:layout_anchorGravity="bottom"
+                tools:listitem="@layout/plan_item" />
+
+            <TextView
+                android:id="@+id/tv_label_tip_wedding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="@string/tips"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/tv_label_20sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_20"
+                tools:listitem="@layout/tip_item" />
+
+            <TextView
+                android:id="@+id/tv_label_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_20"
+                android:drawableEnd="@drawable/divider"
+                android:drawablePadding="@dimen/margin_20"
+                android:drawableRight="@drawable/divider"
+                android:text="@string/todo_list"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/tv_label_20sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_todo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/todo_item" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

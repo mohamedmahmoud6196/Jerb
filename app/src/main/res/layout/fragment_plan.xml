@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.m7mdmimo.jerb.fragment.PlanFragment">
+
+    <include layout="@layout/include_plan_bar" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_plan_location"
+            android:layout_width="@dimen/image_medium"
+            android:layout_height="@dimen/image_medium"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/tv_label_plan_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_toEndOf="@+id/img_plan_location"
+            android:layout_toRightOf="@+id/img_plan_location"
+            android:text="@string/plan_location_label"
+            android:textSize="@dimen/tv_label_20sp" />
+
+        <AutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/autocomplete_plan_cities"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_label_plan_location"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_toEndOf="@+id/img_plan_location"
+            android:layout_toRightOf="@+id/img_plan_location"
+            android:drawableLeft="@drawable/ic_attach_location"
+            android:drawableStart="@drawable/ic_attach_location"
+            android:maxWidth="200dp" />
+
+        <RadioButton
+            android:id="@+id/radio_plan_location_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/autocomplete_plan_cities"
+            android:text="@string/radio_plan_location_default" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_friend_plan"
+            android:layout_width="@dimen/image_medium"
+            android:layout_height="@dimen/image_medium"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/ic_celebration" />
+
+        <TextView
+            android:id="@+id/tv_label_plan_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_toEndOf="@+id/img_friend_plan"
+            android:layout_toRightOf="@+id/img_friend_plan"
+            android:text="@string/plan_friend_label"
+            android:textSize="@dimen/tv_label_20sp" />
+
+        <TextView
+            android:id="@+id/tv_seek_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_label_plan_friend"
+            android:layout_centerHorizontal="true"
+            android:inputType="number" />
+
+        <ImageView
+            android:id="@+id/image_plan_friend_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_friend_plan"
+            android:background="@drawable/ic_friends_min" />
+
+        <android.support.v7.widget.AppCompatSeekBar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/seek_plan_friends"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_plan_friend_min"
+            android:layout_below="@id/img_friend_plan"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/image_plan_friend_min"
+            android:layout_toRightOf="@+id/image_plan_friend_min"
+            android:max="1000"
+            android:maxWidth="200dp"
+            android:min="100" />
+
+        <ImageView
+            android:id="@+id/image_plan_friend_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_friend_plan"
+            android:layout_toEndOf="@+id/seek_plan_friends"
+            android:layout_toRightOf="@+id/seek_plan_friends"
+            android:background="@drawable/ic_friends_max" />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_plan_cost"
+            android:layout_width="@dimen/image_medium"
+            android:layout_height="@dimen/image_medium"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/ic_money" />
+
+        <TextView
+            android:id="@+id/tv_label_plan_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_toEndOf="@+id/img_plan_cost"
+            android:layout_toRightOf="@+id/img_plan_cost"
+            android:text="@string/plan_cost_label"
+            android:textSize="@dimen/tv_label_20sp" />
+
+        <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/edit_plan_cost"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_label_plan_cost"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_toEndOf="@+id/img_plan_cost"
+            android:layout_toRightOf="@+id/img_plan_cost"
+            android:drawableLeft="@drawable/ic_attach_money"
+            android:drawableStart="@drawable/ic_attach_money"
+            android:maxWidth="200dp" />
+
+        <RadioButton
+            android:id="@+id/radio_plan_cost_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_plan_cost"
+            android:text="@string/radio_plan_location_default" />
+    </RelativeLayout>
+
+</LinearLayout>

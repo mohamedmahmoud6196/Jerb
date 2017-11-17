@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <DatePicker
+        android:id="@+id/date_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:endYear="2020"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:startYear="2017"></DatePicker>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/date_plan"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginStart="@dimen/margin_10"
+        android:background="@color/transparent"
+        android:text="Cancel"
+        android:id="@+id/btn_cancel"
+        android:textColor="@color/purple" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/date_plan"
+        android:background="@color/transparent"
+        android:text="Ok"
+        android:textColor="@color/purple"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

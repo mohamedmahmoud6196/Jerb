@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Jerb</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_day_remaining">Day</string>
+    <string name="label_sec_remaining">Sec</string>
+    <string name="label_min_remaining">Mins</string>
+    <string name="label_hour_remaining">Hours</string>
+    <string name="add_cover">Add cover</string>
+    <string name="tips">Tips For Weedding</string>
+    <string name="cost">Planned cost</string>
+    <string name="family"><![CDATA[+Family&friends]]></string>
+    <string name="todo_list">To Do List</string>
+    <string name="bar_name">Love Story</string>
+    <string name="next">Next</string>
+    <string name="plan_location_label"> You\'r celebrating at</string>
+    <string name="radio_plan_location_default">We havn\'t decided yet </string>
+    <string name="plan_friend_label"><![CDATA[How many friends &family]]></string>
+    <string name="plan_cost_label">Planning to spend</string>
+    <string-array name="plan_cities">
+        <item> Aswan Governorate</item>
+        <item> Alex </item>
+        <item>Asyut </item>
+        <item> Beheira </item>
+        <item> Beni Suef </item>
+        <item> Cairo </item>
+        <item>  Dakahlia </item>
+        <item> Damietta </item>
+        <item> Faiyum </item>
+
+
+    </string-array>
+</resources>
